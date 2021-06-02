@@ -9,10 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utils {
 	private WebDriver driver;
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+	private WebDriverWait wait;
 
 	public Utils(WebDriver driver) {
 		this.driver = driver;
+		this.wait = new WebDriverWait(driver, 5);
 	}
 
 	public void preencheCampoPorId(String id_campo, String value) {
